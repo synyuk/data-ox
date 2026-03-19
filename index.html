@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DataOx</title>
+
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+
+  <script type="module" crossorigin src="/assets/app.min.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/app.min.css">
+</head>
+<body>
+<section class="contact-form light">
+    <div class="container">
+        <div class="container__wrap">
+            <div class="contact-form__left">
+                <h2>HOW CAN THIS REPORT HELP YOU STAND OUT IN THE COMPETITION?</h2>
+                <ul class="list__main">
+                    <li>Decode the year gone by</li>
+                    <li>Understand the market outlook for kev economics</li>
+                    <li>Know the outlook for the worts main economiod</li>
+                    <li>Uncover industry trends that are most relevant</li>
+                    <li>Learn four practical tips to stay ahead</li>
+                    <li>Explore solutions and how they can help you</li>
+                </ul>
+            </div>
+            <div class="contact-form__right">
+                <div class="contact-form__title">Fill up this form to get the 2024 Trends Report delivered straight to your inbox</div>
+                <form action="/submit-report" method="POST" class="trend-report-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="firstName" name="first_name" required placeholder="First Name*">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="lastName" name="last_name" required placeholder="Last Name*">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder="Email*">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" required placeholder="Company*">
+                        </div>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect width="24" height="24" rx="6" fill="#257FFC"/>
+                                  <path d="M9.95801 17.0003L5.20801 12.2503L6.39551 11.0628L9.95801 14.6253L17.6038 6.97949L18.7913 8.16699L9.95801 17.0003Z"
+                                        fill="white"/>
+                                </svg>
+                            </span>
+                            Please tick this box if you would like to receive market insight, the latest product updates and company news from DataOx
+                        </label>
+                    </div>
+
+                    <div class="form-privacy">
+                        Please click here to read our Privacy. Notice to see how we collect and store your information
+                    </div>
+
+                    <button type="submit" class="btn-download">
+                        DOWNLOAD NOW
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
