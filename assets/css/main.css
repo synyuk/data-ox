@@ -182,10 +182,10 @@ ul.list__main li:last-child{
 ul.list__main li:before{
     content: "";
     position: absolute;
+    top: -4px;
     left: 2px;
-    top: 2px;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 24px;
     background: url("../img/list-marker.svg") no-repeat center;
     background-size: cover;
 }
@@ -198,7 +198,7 @@ ul.list__main li:before{
 
     ul.list__main li{
         margin-bottom: 24px;
-        min-height: 44px;
+        min-height: 50px;
     }
 }
 
@@ -218,6 +218,12 @@ ul.list__main li:before{
         font-size: 32px;
         margin-bottom: 32px;
         line-height: 88%;
+    }
+
+    ul.list__main li:before{
+        width: 24px;
+        height: 26px;
+        top: -5px;
     }
 }
 
