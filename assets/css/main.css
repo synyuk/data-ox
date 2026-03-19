@@ -95,7 +95,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width:960px) {
+@media (min-width: 767px) and (max-width:960px) {
     :root {
         --container-width:744px;
         --container-padding: 30px
@@ -111,7 +111,7 @@
 
 @media (min-width: 1281px) {
     :root {
-        --container-width:1280px;
+        --container-width:1232px;
         --container-padding: 0px
     }
 }
@@ -182,18 +182,23 @@ ul.list__main li:last-child{
 ul.list__main li:before{
     content: "";
     position: absolute;
-    left: 0;
-    padding: 2px;
+    left: 2px;
+    top: 2px;
     width: 16px;
     height: 16px;
-    background: url("assets/img/list-marker.svg") no-repeat center;
+    background: url("../img/list-marker.svg") no-repeat center;
     background-size: cover;
 }
 
-@media (max-width: 1280px)  and (min-width: 768px){
+@media (max-width: 1280px)  and (min-width: 767px){
     ul.list__main{
         column-count: 2;
-        column-gap: 40px;
+        column-gap: 24px;
+    }
+
+    ul.list__main li{
+        margin-bottom: 24px;
+        min-height: 44px;
     }
 }
 
@@ -202,12 +207,17 @@ ul.list__main li:before{
         font-size: 48px;
         margin-bottom: 32px;
     }
+
+    ul.list__main li{
+        margin-bottom: 16px;
+    }
 }
 
 @media (max-width: 767px) {
     h2{
         font-size: 32px;
-        margin-bottom: 24px;
+        margin-bottom: 32px;
+        line-height: 88%;
     }
 }
 
@@ -215,6 +225,10 @@ ul.list__main li:before{
 .contact-form {
     padding: 108px 0;
     background: #f8f9fa;
+}
+
+.contact-form h2{
+    margin-top: 11px;
 }
 
 .contact-form .container__wrap{
@@ -238,6 +252,10 @@ ul.list__main li:before{
         padding: 32px 0;
     }
 
+    .contact-form h2{
+        margin-top: 0;
+    }
+
     .contact-form .container__wrap{
         flex-direction: column-reverse;
         gap: 44px;
@@ -245,18 +263,13 @@ ul.list__main li:before{
 
     .contact-form__right{
         width: 100%;
+        
     }
 }
 
 @media (max-width: 767px) {
     .contact-form {
         padding: 16px 0;
-    }
-
-    .container__wrap {
-        flex-flow: column;
-        gap: 44px;
-        padding: 24px 0;
     }
 }
 /*-----END SECTION CONTACTS-----*/
@@ -327,7 +340,7 @@ ul.list__main li:before{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 22px 16px;
+    padding: 22px 14px;
     width: 100%;
     height: 56px;
     background: #FFFFFF;
@@ -359,8 +372,9 @@ ul.list__main li:before{
 }
 
 .contact-form .form-checkbox {
-    margin: 48px 0 24px 0;
+    margin: 32px 0 48px 0;
     position: relative;
+    max-width: 418px;
 }
 
 .contact-form .checkbox-label {
@@ -481,13 +495,17 @@ ul.list__main li:before{
 }
 
 @media(max-width: 1280px){
-
+    .contact-form__title{
+        text-align: left;
+        margin-bottom: 24px;
+    }
+    .contact-form .form-checkbox{
+        margin: 24px 0 40px 0;
+        max-width: 100%;
+    }
 }
 
-@media (max-width: 768px) {
-    .container__wrap {
-        flex-direction: column;
-    }
+@media (max-width: 767px) {
 
     .contact-form__right{
         padding: 16px;
@@ -505,13 +523,16 @@ ul.list__main li:before{
         font-size: 24px;
     }
 
-    .contact-form .form-privacy, .contact-form .form-checkbox{
+    .contact-form .form-privacy{
         font-size: 14px;
-        line-height: 140%;
+        line-height: 100%;
     }
 
     .contact-form .form-checkbox{
+        font-size: 14px;
         margin: 24px 0;
+        letter-spacing: -0.04em;
+        line-height: 140%;
     }
 }
 
