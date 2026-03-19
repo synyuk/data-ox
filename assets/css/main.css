@@ -1,0 +1,502 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Room";
+    src: url("../fonts/Room.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Room";
+    src: url("../fonts/Room-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Room";
+    src: url("../fonts/Room-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Room";
+    src: url("../fonts/Room-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-sans: "Montserrat", sans-serif;
+    --font-display: "Room", sans-serif;
+    --container-width: 100%;
+    --container-padding: 16px;
+    --section-light: #F4F7FC;
+    --title-color: #0B1A40;
+    --buttom-green: #C8FCA9;
+    --buttom-green-hover: #b4f38f;
+    --color-blue: #257FFC;
+}
+
+@media (max-width: 480px) {
+    :root {
+        --container-width:100%;
+        --container-padding: 16px
+    }
+}
+
+@media (min-width: 481px) and (max-width:640px) {
+    :root {
+        --container-width:100%;
+        --container-padding: 16px
+    }
+}
+
+@media (min-width: 641px) and (max-width:767px) {
+    :root {
+        --container-width:100%;
+        --container-padding: 16px
+    }
+}
+
+@media (min-width: 768px) and (max-width:960px) {
+    :root {
+        --container-width:744px;
+        --container-padding: 30px
+    }
+}
+
+@media (min-width: 961px) and (max-width:1280px) {
+    :root {
+        --container-width:960px;
+        --container-padding: 30px
+    }
+}
+
+@media (min-width: 1281px) {
+    :root {
+        --container-width:1280px;
+        --container-padding: 0px
+    }
+}
+
+body {
+    margin: 0;
+    background: #FFF;
+    font-family: var(--font-sans);
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.022em;
+    color: rgba(8, 14, 41, 0.8);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-family: var(--font-display);;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 80%;
+    letter-spacing: -0.04em;
+    text-transform: lowercase;
+    color: var(--title-color);
+    margin: 0 0 40px;
+}
+
+.container{
+    height: 100%;
+    margin: 0 auto;
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    position: relative;
+    width: 100%;
+}
+
+section{
+    overflow: hidden;
+}
+
+.light{
+    background: var(--section-light);
+}
+
+ul.list__main{
+    list-style: none;
+    padding: 0;
+}
+
+ul.list__main li{
+    position: relative;
+    padding-left: 36px;
+    margin-bottom: 24px;
+}
+
+ul.list__main li:last-child{
+    margin-bottom: 0;
+}
+
+ul.list__main li:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    padding: 2px;
+    width: 16px;
+    height: 16px;
+    background: url("assets/img/list-marker.svg") no-repeat center;
+    background-size: cover;
+}
+
+@media (max-width: 1280px)  and (min-width: 768px){
+    ul.list__main{
+        column-count: 2;
+        column-gap: 40px;
+    }
+}
+
+@media (max-width: 1280px) {
+    h2{
+        font-size: 48px;
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 767px) {
+    h2{
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+}
+
+/*-----SECTION CONTACTS-----*/
+.contact-form {
+    padding: 108px 0;
+    background: #f8f9fa;
+}
+
+
+.contact-form .container__wrap{
+    display: flex;
+    gap: 124px;
+}
+
+.contact-form__left {
+    flex: 1;
+}
+
+.contact-form__right {
+    background: #FFF;
+    padding: 24px;
+    width: 502px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1280px) {
+    .contact-form {
+        padding: 32px 0;
+    }
+
+    .contact-form .container__wrap{
+        flex-direction: column-reverse;
+        gap: 44px;
+    }
+
+    .contact-form__right{
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-form {
+        padding: 16px 0;
+    }
+
+    .container__wrap {
+        flex-flow: column;
+        gap: 44px;
+        padding: 24px 0;
+    }
+}
+/*-----END SECTION CONTACTS-----*/
+
+/*-----FORM-----*/
+.container__wrap {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.contact-form .form-privacy,
+.contact-form .form-checkbox{
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.022em;
+    color: rgba(11, 26, 64, 0.6);
+}
+
+.contact-form .form-checkbox{
+    margin-bottom: 48px;
+}
+
+.contact-form .form-privacy{
+    margin-bottom: 24px;
+}
+
+.contact-form__left {
+    flex: 1;
+    min-width: 320px;
+}
+
+.contact-form__title{
+    font-family: var(--font-display);;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 88%;
+    /* or 28px */
+    text-align: center;
+    letter-spacing: -0.04em;
+    text-transform: lowercase;
+    color: var(--title-color);
+    margin-bottom: 32px;
+}
+
+.contact-form .form-header h3 {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-form .form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-form .form-group {
+    flex: 1;
+    position: relative;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 22px 16px;
+    width: 100%;
+    height: 56px;
+    background: #FFFFFF;
+    border: 2px solid rgba(34, 34, 34, 0.08);
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    leading-trim: NONE;
+    border: 2px solid rgba(34, 34, 34, .078);
+    color: #222;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-style: Medium;
+    font-weight: 500;
+    letter-spacing: -.04rem;
+    line-height: 90%;
+    outline: none;
+    transition: .3s ease;
+}
+
+.contact-form input:focus {
+    outline: none;
+    border-color: var(--color-blue);
+}
+
+.contact-form .required {
+    color: #ef4444;
+    margin-left: 4px;
+}
+
+.contact-form .form-checkbox {
+    margin: 1.5rem 0;
+}
+
+.contact-form .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.contact-form .custom-checkbox {
+    position: relative;
+    display: inline-flex;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.contact-form .custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.contact-form input::placeholder {
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 90%;
+    letter-spacing: -0.04em;
+    color: rgba(34, 34, 34, 0.48);
+    opacity: 1;
+    transition: color 0.2s;
+}
+
+.contact-form input:focus::placeholder {
+    color: transparent;
+}
+
+.contact-form .checkmark {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.contact-form .checkmark svg {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+}
+
+.contact-form .custom-checkbox input:checked + .checkmark svg {
+    opacity: 1;
+}
+
+.contact-form .checkmark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: white;
+    transition: all 0.2s ease;
+    border: 1px solid var(--color-blue);
+}
+
+.contact-form .custom-checkbox input:checked + .checkmark::before {
+    border-color: var(--color-blue);
+    background: var(--color-blue);
+}
+
+.contact-form .custom-checkbox:hover .checkmark::before {
+    border-color: var(--color-blue);
+}
+
+.contact-form .btn-download {
+    all: unset;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: var(--buttom-green);
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 90%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form .btn-download:hover {
+    background: var(--buttom-green-hover);
+}
+
+@media(max-width: 1280px){
+
+}
+
+@media (max-width: 768px) {
+    .container__wrap {
+        flex-direction: column;
+    }
+
+    .contact-form__right{
+        padding: 16px;
+    }
+
+    .contact-form__title{
+        font-size: 24px;
+    }
+
+    .contact-form .form-row {
+        flex-direction: column;
+    }
+
+    .contact-form .form-header h3 {
+        font-size: 24px;
+    }
+
+    .contact-form .form-privacy, .contact-form .form-checkbox{
+        font-size: 14px;
+        line-height: 140%;
+    }
+}
+
+/*-----END FORM-----*/
