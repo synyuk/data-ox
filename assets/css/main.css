@@ -223,7 +223,8 @@ ul.list__main li:before{
     ul.list__main li:before{
         width: 24px;
         height: 26px;
-        top: -5px;
+        top: -7px;
+        left: -2px;
     }
 }
 
