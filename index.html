@@ -13,6 +13,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
 
+    <link rel="stylesheet" href="./assets/css/main.css">
+
 </head>
 <body>
 <section class="contact-form light">
@@ -31,51 +33,52 @@
             </div>
             <div class="contact-form__right">
                 <div class="contact-form__title">Fill up this form to get the 2024 Trends Report delivered straight to your inbox</div>
-                <form action="/submit-report" method="POST" class="trend-report-form">
+                <form action="/submit-report" method="POST" class="trend-report-form" id="contactForm" novalidate>
+
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" id="firstName" name="first_name" required placeholder="First Name*">
+                            <input type="text" id="firstName" name="firstName" required placeholder="First Name*">
+                            <div class="error-message" data-for="firstName"></div>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="lastName" name="last_name" required placeholder="Last Name*">
+                            <input type="text" id="lastName" name="lastName" required placeholder="Last Name*">
+                            <div class="error-message" data-for="lastName"></div>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
                             <input type="email" id="email" name="email" required placeholder="Email*">
+                            <div class="error-message" data-for="email"></div>
                         </div>
                         <div class="form-group">
                             <input type="text" id="company" name="company" required placeholder="Company*">
+                            <div class="error-message" data-for="company"></div>
                         </div>
                     </div>
 
                     <div class="form-checkbox">
                         <label class="custom-checkbox">
-                            <input type="checkbox" checked>
+                            <input type="checkbox" name="subscribe" id="subscribe" checked>
                             <span class="checkmark">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                   <rect width="24" height="24" rx="6" fill="#257FFC"/>
-                                  <path d="M9.95801 17.0003L5.20801 12.2503L6.39551 11.0628L9.95801 14.6253L17.6038 6.97949L18.7913 8.16699L9.95801 17.0003Z"
-                                        fill="white"/>
+                                  <path d="M9.95801 17.0003L5.20801 12.2503L6.39551 11.0628L9.95801 14.6253L17.6038 6.97949L18.7913 8.16699L9.95801 17.0003Z" fill="white"/>
                                 </svg>
                             </span>
                             Please tick this box if you would like to receive market insight, the latest product updates and company news from DataOx
                         </label>
+                        <div class="error-message" data-for="subscribe"></div>
                     </div>
 
-                    <div class="form-privacy">
-                        Please click here to read our Privacy. Notice to see how we collect and store your information
-                    </div>
+                    <div class="form-privacy">Please click here to read our Privacy. Notice to see how we collect and store your information</div>
 
-                    <button type="submit" class="btn-download">
-                        DOWNLOAD NOW
-                    </button>
+                    <button type="submit" class="btn-download">DOWNLOAD NOW</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
-<script type="module" src="./assets/js/main.js"></script>
+<script defer src="./assets/js/main.js"></script>
 </body>
 </html>

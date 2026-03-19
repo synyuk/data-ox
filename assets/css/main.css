@@ -217,7 +217,6 @@ ul.list__main li:before{
     background: #f8f9fa;
 }
 
-
 .contact-form .container__wrap{
     display: flex;
     gap: 124px;
@@ -278,10 +277,6 @@ ul.list__main li:before{
     line-height: 120%;
     letter-spacing: -0.022em;
     color: rgba(11, 26, 64, 0.6);
-}
-
-.contact-form .form-checkbox{
-    margin-bottom: 48px;
 }
 
 .contact-form .form-privacy{
@@ -364,7 +359,8 @@ ul.list__main li:before{
 }
 
 .contact-form .form-checkbox {
-    margin: 1.5rem 0;
+    margin: 48px 0 24px 0;
+    position: relative;
 }
 
 .contact-form .checkbox-label {
@@ -468,6 +464,22 @@ ul.list__main li:before{
     background: var(--buttom-green-hover);
 }
 
+.contact-form .error-message {
+    display: none;
+    position: absolute;
+    top: 100%;
+    color: #da0101;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.contact-form input.invalid {
+    border-color: #e74c3c !important;
+}
+
 @media(max-width: 1280px){
 
 }
@@ -496,6 +508,10 @@ ul.list__main li:before{
     .contact-form .form-privacy, .contact-form .form-checkbox{
         font-size: 14px;
         line-height: 140%;
+    }
+
+    .contact-form .form-checkbox{
+        margin: 24px 0;
     }
 }
 
